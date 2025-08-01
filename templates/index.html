@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKKO | Tienda Natural</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UKKO | Productos Naturales</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="{{ url_for('static', filename='img/logo_negro.jpg') }}" alt="UKKO Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Bienvenido a UKKO</h1>
-            <p>Tu tienda de productos naturales y bienestar</p>
-            <a href="#" class="btn">Explorar productos</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 UKKO. Todos los derechos reservados.</p>
-    </footer>
+  <div class="hero">
+    <div class="overlay">
+      <img src="static/img/logo_negro.jpg" alt="UKKO Logo" class="logo" />
+      <h1 class="title">Bienvenido a UKKO</h1>
+      <p class="subtitle">Productos naturales, saludables y conscientes</p>
+      <a href="#" class="cta">Explorar productos</a>
+    </div>
+  </div>
 </body>
 </html>
