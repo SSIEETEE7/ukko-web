@@ -39,31 +39,32 @@ body {
 
 /* Carrusel principal */
 .carousel {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 30vh; /* ajusta a lo que necesites, por ejemplo 40vh o 35vh */
+    overflow: hidden;
 }
 
 .slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
 }
 
+
 .caption {
-  position: absolute;
-  bottom: 60px;
-  left: 50px;
-  background: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 480px;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    border-radius: 8px;
 }
+
 
 .caption h2 {
   font-size: 2.2rem;
