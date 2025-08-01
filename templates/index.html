@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UKKO | Productos Naturales</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>UKKO - Productos Naturales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="hero">
-    <div class="overlay">
-      <img src="static/img/logo_negro.jpg" alt="UKKO Logo" class="logo" />
-      <h1 class="title">Bienvenido a UKKO</h1>
-      <p class="subtitle">Productos naturales, saludables y conscientes</p>
-      <a href="#" class="cta">Explorar productos</a>
+
+<header class="header">
+    <img src="{{ url_for('static', filename='img/logo_blanco.jpg') }}" alt="UKKO Logo" class="logo">
+    <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
+
+<!-- Carrusel -->
+<section class="carousel">
+    <div class="slide fade">
+        <img src="{{ url_for('static', filename='img/slide1.jpg') }}" alt="Slide 1">
+        <div class="caption">
+            <h2>Bienestar Natural</h2>
+            <p>Descubre productos que nutren tu cuerpo y alma</p>
+            <a href="#" class="btn">Explorar</a>
+        </div>
     </div>
-  </div>
+    <div class="slide fade">
+        <img src="{{ url_for('static', filename='img/slide2.jpg') }}" alt="Slide 2">
+        <div class="caption">
+            <h2>100% Orgánico</h2>
+            <p>Calidad certificada, libre de químicos</p>
+            <a href="#" class="btn">Ver catálogo</a>
+        </div>
+    </div>
+    <div class="slide fade">
+        <img src="{{ url_for('static', filename='img/slide3.jpg') }}" alt="Slide 3">
+        <div class="caption">
+            <h2>Nutrición Inteligente</h2>
+            <p>Superfoods para potenciar tu día</p>
+            <a href="#" class="btn">Ir a Superfoods</a>
+        </div>
+    </div>
+    <div class="slide fade">
+        <img src="{{ url_for('static', filename='img/slide4.jpg') }}" alt="Slide 4">
+        <div class="caption">
+            <h2>Envíos Rápidos</h2>
+            <p>Recíbelo al día siguiente</p>
+            <a href="#" class="btn">Comprar ahora</a>
+        </div>
+    </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    const showSlides = () => {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000); // 5 segundos
+    };
+    showSlides();
+</script>
+
 </body>
 </html>
