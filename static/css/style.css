@@ -1,225 +1,53 @@
-/* Reset básico */
-* {
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Tipografía y color */
-body {
   font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  background-color: #f8f8f8;
-  line-height: 1.6;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Header */
-header {
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-inner {
+.hero {
+  background-image: url('../img/fondo_natural.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #5b8c5a;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav ul li a {
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #5b8c5a;
-}
-
-.cart {
-  font-size: 20px;
-  background-color: #5b8c5a;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(to bottom right, #e0f4df, #fefefe);
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 42px;
-  color: #4d774e;
+  width: 160px;
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
+.title {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #222;
 }
 
-.hero .btn {
-  background-color: #5b8c5a;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.hero .btn:hover {
-  background-color: #4a7049;
-}
-
-/* Categorías */
-.categories {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.categories h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
-  color: #333;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 20px;
-}
-
-.category {
-  background-color: #f0f0f0;
-  padding: 30px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.category:hover {
-  background-color: #e3f2e1;
-}
-
-/* Productos destacados */
-.featured-products {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.product {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: box-shadow 0.3s;
-}
-
-.product:hover {
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-}
-
-.product img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.product h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.product p {
-  font-size: 14px;
-  color: #666;
-}
-
-.product .price {
-  font-size: 16px;
-  color: #4d774e;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Beneficios */
-.benefits {
-  background-color: #e6f4e6;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.benefit-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.benefit {
-  max-width: 250px;
-}
-
-.benefit h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.benefit p {
-  font-size: 14px;
+.subtitle {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
   color: #444;
 }
 
-/* Footer */
-footer {
-  background-color: #333;
+.cta {
+  background-color: #567b50;
   color: white;
-  padding: 40px 20px;
-  text-align: center;
-  font-size: 14px;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-footer p {
-  margin-bottom: 10px;
+.cta:hover {
+  background-color: #44613f;
 }
