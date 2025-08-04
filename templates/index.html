@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>UKKO - Productos Naturales</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKKO Superfoods</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="header">
-  <img src="{{ url_for('static', filename='img/logo_blanco.jpg') }}" alt="UKKO Logo" class="logo">
-  <nav class="nav">
-    <a href="#">Inicio</a>
-    <a href="#">Productos</a>
-    <a href="#">Nosotros</a>
-    <a href="#">Contacto</a>
-  </nav>
-</header>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">UKKO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Beneficios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Carrusel -->
-<section class="carousel">
-  <div class="slide fade" style="background-image: url({{ url_for('static', filename='img/slide1.png') }});"
+    <!-- Hero con imagen de fondo -->
+    <section class="hero">
+        <div class="hero-texto">
+            <h1>Superfoods Naturales</h1>
+            <p>Descubre la nueva forma de nutrirte</p>
+            <a href="#" class="btn">Ver productos</a>
+        </div>
+    </section>
 
-    <div class="caption">
-      <h2>Bienestar Natural</h2>
-      <p>Descubre productos que nutren tu cuerpo y alma</p>
-      <a href="#" class="btn">Explorar</a>
-    </div>
-  </div>
-  <div class="slide fade" style="background-image: url({{ url_for('static', filename='img/slide2.png') }});"
+    <!-- Sección productos -->
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto1.jpg') }}" alt="Producto 1">
+                <h3>Ashwagandha</h3>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto2.jpg') }}" alt="Producto 2">
+                <h3>Maca Andina</h3>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto3.jpg') }}" alt="Producto 3">
+                <h3>Cúrcuma Orgánica</h3>
+            </div>
+        </div>
+    </section>
 
-    <div class="caption">
-      <h2>100% Orgánico</h2>
-      <p>Calidad certificada, libre de químicos</p>
-      <a href="#" class="btn">Ver catálogo</a>
-    </div>
-  </div>
-  <div class="slide fade" sstyle="background-image: url({{ url_for('static', filename='img/slide3.png') }});"
+    <!-- Beneficios -->
+    <section class="beneficios">
+        <h2>¿Por qué elegir UKKO?</h2>
+        <div class="beneficio-lista">
+            <div class="beneficio">
+                <h3>100% Natural</h3>
+                <p>Sin aditivos ni conservadores.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Envíos a todo México</h3>
+                <p>Recibe en casa sin complicaciones.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Certificación Orgánica</h3>
+                <p>Productos avalados por organismos internacionales.</p>
+            </div>
+        </div>
+    </section>
 
-      <h2>Nutrición Inteligente</h2>
-      <p>Superfoods para potenciar tu día</p>
-      <a href="#" class="btn">Ir a Superfoods</a>
-    </div>
-  </div>
-  <div class="slide fade" style="background-image: url({{ url_for('static', filename='img/slide4.png') }});"
-
-    <div class="caption">
-      <h2>Envíos Rápidos</h2>
-      <p>Recíbelo al día siguiente sin costo</p>
-      <a href="#" class="btn">Comprar ahora</a>
-    </div>
-  </div>
-</section>
-
-<script>
-  let slideIndex = 0;
-  const showSlides = () => {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // cambia cada 5s
-  };
-  showSlides();
-</script>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 UKKO Superfoods | Síguenos en redes</p>
+    </footer>
 
 </body>
 </html>

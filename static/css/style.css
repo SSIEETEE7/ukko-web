@@ -1,131 +1,80 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKKO Superfoods</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: #222;
-  line-height: 1.6;
-}
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">UKKO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Beneficios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Header / Navbar */
-.header {
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
+    <!-- Hero con imagen de fondo -->
+    <section class="hero">
+        <div class="hero-texto">
+            <h1>Superfoods Naturales</h1>
+            <p>Descubre la nueva forma de nutrirte</p>
+            <a href="#" class="btn">Ver productos</a>
+        </div>
+    </section>
 
-.logo {
-  height: 50px;
-}
+    <!-- Sección productos -->
+    <section class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto1.jpg') }}" alt="Producto 1">
+                <h3>Ashwagandha</h3>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto2.jpg') }}" alt="Producto 2">
+                <h3>Maca Andina</h3>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/producto3.jpg') }}" alt="Producto 3">
+                <h3>Cúrcuma Orgánica</h3>
+            </div>
+        </div>
+    </section>
 
-.nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
+    <!-- Beneficios -->
+    <section class="beneficios">
+        <h2>¿Por qué elegir UKKO?</h2>
+        <div class="beneficio-lista">
+            <div class="beneficio">
+                <h3>100% Natural</h3>
+                <p>Sin aditivos ni conservadores.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Envíos a todo México</h3>
+                <p>Recibe en casa sin complicaciones.</p>
+            </div>
+            <div class="beneficio">
+                <h3>Certificación Orgánica</h3>
+                <p>Productos avalados por organismos internacionales.</p>
+            </div>
+        </div>
+    </section>
 
-.nav a:hover {
-  color: #00cc88;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 UKKO Superfoods | Síguenos en redes</p>
+    </footer>
 
-/* Carrusel principal */
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 30vh; /* ajusta a lo que necesites, por ejemplo 40vh o 35vh */
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    transition: opacity 1s ease-in-out;
-}
-
-
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    color: white;
-    background-color: rgba(0,0,0,0.4);
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
-
-.caption h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.caption p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #00aa66;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #007d4a;
-}
-
-/* Fade effect */
-.fade {
-  animation: fade 1s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .caption {
-    left: 20px;
-    bottom: 40px;
-    padding: 15px;
-  }
-
-  .caption h2 {
-    font-size: 1.6rem;
-  }
-
-  .caption p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 8px 16px;
-  }
-
-  .nav {
-    display: none; /* podrías reemplazar con menú hamburguesa luego */
-  }
-
-  .logo {
-    height: 40px;
-  }
-}
+</body>
+</html>
