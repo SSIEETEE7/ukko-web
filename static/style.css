@@ -1,83 +1,67 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* Barra superior */
+/* Barra negra superior */
 .top-bar {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 8px;
-  font-size: 14px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 14px;
 }
 
-/* Header */
+/* Header principal */
 .main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .logo {
-  height: 60px;
+    height: 40px;
 }
 
 .search-bar input {
-  width: 400px;
-  padding: 10px 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 30px;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
 }
 
+/* Botones */
 .header-buttons {
-  display: flex;
-  gap: 12px;
+    display: flex;
+    gap: 10px;
 }
 
 .btn-outline {
-  border: 2px solid black;
-  background: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
+    border: 1px solid black;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 25px;
 }
 
 .btn-black {
-  background: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
 }
 
-/* Menú */
+/* Menú de navegación */
 .nav-bar {
-  background: white;
-  border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    padding: 15px;
 }
 
 .nav-bar ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  padding: 16px 40px;
-  margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-bar li a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.nav-bar li a:hover {
-  text-decoration: underline;
+.nav-bar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
 }
