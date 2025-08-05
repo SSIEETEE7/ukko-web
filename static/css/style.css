@@ -1,80 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKKO Superfoods</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="logo">UKKO</div>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Beneficios</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+header {
+    background-color: #cfe9db;
+    padding: 2rem 1rem;
+}
 
-    <!-- Hero con imagen de fondo -->
-    <section class="hero">
-        <div class="hero-texto">
-            <h1>Superfoods Naturales</h1>
-            <p>Descubre la nueva forma de nutrirte</p>
-            <a href="#" class="btn">Ver productos</a>
-        </div>
-    </section>
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-    <!-- Sección productos -->
-    <section class="productos">
-        <h2>Nuestros Productos</h2>
-        <div class="productos-grid">
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/producto1.jpg') }}" alt="Producto 1">
-                <h3>Ashwagandha</h3>
-            </div>
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/producto2.jpg') }}" alt="Producto 2">
-                <h3>Maca Andina</h3>
-            </div>
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/producto3.jpg') }}" alt="Producto 3">
-                <h3>Cúrcuma Orgánica</h3>
-            </div>
-        </div>
-    </section>
+section {
+    padding: 2rem;
+}
 
-    <!-- Beneficios -->
-    <section class="beneficios">
-        <h2>¿Por qué elegir UKKO?</h2>
-        <div class="beneficio-lista">
-            <div class="beneficio">
-                <h3>100% Natural</h3>
-                <p>Sin aditivos ni conservadores.</p>
-            </div>
-            <div class="beneficio">
-                <h3>Envíos a todo México</h3>
-                <p>Recibe en casa sin complicaciones.</p>
-            </div>
-            <div class="beneficio">
-                <h3>Certificación Orgánica</h3>
-                <p>Productos avalados por organismos internacionales.</p>
-            </div>
-        </div>
-    </section>
+img {
+    max-width: 300px;
+    margin-top: 1rem;
+}
+/* trigger redeploy */
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 UKKO Superfoods | Síguenos en redes</p>
-    </footer>
 
-</body>
-</html>
+
