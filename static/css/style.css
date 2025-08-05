@@ -1,111 +1,83 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: sans-serif;
 }
 
-/* Barra negra superior */
+/* Barra superior */
 .top-bar {
-  background-color: #000;
-  color: #fff;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 20px;
-}
-
-.social-icons i {
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.shipping-text {
-  margin-left: auto;
-  margin-right: auto;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
 }
 
 /* Header principal */
 .main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid #eee;
 }
 
-.logo {
-  height: 50px;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  padding: 8px 15px;
-  flex: 1;
-  max-width: 600px;
-  margin: 0 40px;
-}
-
-.search-bar i {
-  color: #888;
-  margin-right: 10px;
+.logo img {
+    height: 60px;
 }
 
 .search-bar input {
-  border: none;
-  outline: none;
-  width: 100%;
+    width: 500px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
 }
 
-/* Botones del header */
 .header-buttons {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 12px;
 }
 
-.header-buttons button {
-  border: none;
-  border-radius: 30px;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.btn-outline {
+    border: 2px solid black;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.account-btn {
-  background-color: #fff;
-  border: 2px solid #000;
+.btn-black {
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
 }
 
-.cart-btn {
-  background-color: #000;
-  color: #fff;
+/* Nav */
+.nav-bar {
+    background: white;
+    border-bottom: 1px solid #eee;
 }
 
-/* Menú principal */
-.main-nav {
-  border-top: 1px solid #eee;
-  padding: 10px 40px;
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 16px 40px;
+    margin: 0;
 }
 
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
+.nav-bar li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
 }
 
-.main-nav li {
-  cursor: pointer;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.nav-bar li a:hover {
+    text-decoration: underline;
 }
-
-
