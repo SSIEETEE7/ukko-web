@@ -1,3 +1,8 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
 /* Barra negra superior */
 .top-bar {
     background-color: #000;
@@ -94,3 +99,17 @@
 .main-banner .dots{ position:absolute; left:50%; bottom:14px; transform:translateX(-50%); display:flex; gap:10px; z-index:2; }
 .main-banner .dot{ width:10px; height:10px; border:0; border-radius:50%; background:#ffffffaa; cursor:pointer; }
 .main-banner .dot.active{ background:#fff; box-shadow:0 0 0 2px #0003 inset; }
+ .banner-content{
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center;
+  color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.35); padding:0 16px;
+}
+.banner-content .cta{
+  margin-top:16px; background:#111; color:#fff; padding:12px 22px;
+  border-radius:28px; text-decoration:none; font-weight:600;
+}
+.banner-content .cta:hover{ filter:brightness(1.1); }
+@media (max-width: 768px){
+  .main-banner{ height: 320px; }
+  .search-bar input{ width: 100%; } /* por si tu header lo necesita */
+}
