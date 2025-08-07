@@ -1,3 +1,6 @@
+<!-- BUILD TEST: v20f7117 -->
+<h1 style="position:fixed;right:10px;bottom:10px;font:12px/1 monospace;color:#999;z-index:9999">v20f7117</h1>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -34,6 +37,60 @@
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
+<!-- Banner principal (slider) -->
+<section class="main-banner" id="slider">
+  <div class="slide active">
+    <img src="{{ url_for('static', filename='img/banner1.jpeg') }}" alt="Banner 1">
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/banner2.jpeg') }}" alt="Banner 2">
+  </div>
+  <div class="slide">
+    <img src="{{ url_for('static', filename='img/banner3.jpeg') }}" alt="Banner 3">
+  </div>
+
+  <!-- Controles opcionales (puntos) -->
+  <div class="dots">
+    <button class="dot active" data-index="0" aria-label="Banner 1"></button>
+    <button class="dot" data-index="1" aria-label="Banner 2"></button>
+    <button class="dot" data-index="2" aria-label="Banner 3"></button>
+  </div>
+</section>
+
+<!-- al final del body, antes de </body> -->
+<script>
+  (function () {
+    const slider = document.getElementById('slider');
+    const slides = Array.from(slider.querySelectorAll('.slide'));
+    const dots = Array.from(slider.querySelectorAll('.dot'));
+    let i = 0, timer = null;
+
+    function show(n) {
+      slides.forEach((s, idx) => s.classList.toggle('active', idx === n));
+      dots.forEach((d, idx) => d.classList.toggle('active', idx === n));
+      i = n;
+    }
+
+    function next() {
+      show((i + 1) % slides.length);
+    }
+
+    function start() { timer = setInterval(next, 4000); }
+    function stop() { clearInterval(timer); }
+
+    dots.forEach(d => d.addEventListener('click', e => {
+      stop();
+      show(Number(e.currentTarget.dataset.index));
+      start();
+    }));
+
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
+
+    start();
+  })();
+</script>
+
 
 </body>
 </html>
