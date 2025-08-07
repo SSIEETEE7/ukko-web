@@ -140,79 +140,29 @@
 </section>
 
 <!-- Secciones de tienda -->
-<section class="shop-sections">
-
-  <!-- 1: SPORTS -->
-  <div class="shop-section" id="cat-sports">
-    <header class="shop-header">
-      <h3>UKKO SPORTS (PROTEÍNAS, BEBIDAS)</h3>
-      <a class="see-all" href="#">Ver todo</a>
-    </header>
-    <div class="cards">
-      <!-- Cards de ejemplo -->
-      <article class="card">
-        <div class="card-img"><img src="{{ url_for('static', filename='img/prod1.jpg') }}" alt="Producto"></div>
-        <h4>Whey Protein</h4><p class="price">$599</p><button class="btn-black">Comprar</button>
-      </article>
-      <article class="card">
-        <div class="card-img"><img src="{{ url_for('static', filename='img/prod2.jpg') }}" alt="Producto"></div>
-        <h4>Bebida Isotónica</h4><p class="price">$39</p><button class="btn-black">Comprar</button>
-      </article>
-      <article class="card">
-        <div class="card-img"><img src="{{ url_for('static', filename='img/prod3.jpg') }}" alt="Producto"></div>
-        <h4>Barra Energética</h4><p class="price">$29</p><button class="btn-black">Comprar</button>
-      </article>
+<section class="categorias">
+    <div class="categoria">
+        <h2>UKKO SPORTS <span>(Proteínas, Bebidas)</span></h2>
+        <a href="#" class="ver-todo">Ver todo</a>
+        <div class="productos">
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/sports1.jpg') }}" alt="Whey Protein">
+                <h3>Whey Protein</h3>
+                <p>$599</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/sports2.jpg') }}" alt="Bebida Isotónica">
+                <h3>Bebida Isotónica</h3>
+                <p>$39</p>
+                <button>Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="{{ url_for('static', filename='img/sports3.jpg') }}" alt="Barra Energética">
+                <h3>Barra Energética</h3>
+                <p>$29</p>
+                <button>Comprar</button>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <!-- 2: CARE -->
-  <div class="shop-section" id="cat-care">
-    <header class="shop-header">
-      <h3>UKKO CARE (PRODUCTOS CUIDADOS DE LA PIEL, SHAMPOOS)</h3>
-      <a class="see-all" href="#">Ver todo</a>
-    </header>
-    <div class="cards">
-      <!-- agrega/duplica cards -->
-    </div>
-  </div>
-
-  <!-- 3: REAL FOOD -->
-  <div class="shop-section" id="cat-realfood">
-    <header class="shop-header">
-      <h3>UKKO REAL FOOD (COMIDA, SNACKS, AGUA)</h3>
-      <a class="see-all" href="#">Ver todo</a>
-    </header>
-    <div class="cards"></div>
-  </div>
-
-  <!-- 4: CASA -->
-  <div class="shop-section" id="cat-casa">
-    <header class="shop-header">
-      <h3>UKKO CASA (PRODUCTOS DETERGENTES, AROMATIZANTES)</h3>
-      <a class="see-all" href="#">Ver todo</a>
-    </header>
-    <div class="cards"></div>
-  </div>
-
-  <!-- 5: ESSENCE -->
-  <div class="shop-section" id="cat-essence">
-    <header class="shop-header">
-      <h3>UKKO ESSENCE (AROMATERAPIA)</h3>
-      <a class="see-all" href="#">Ver todo</a>
-    </header>
-    <div class="cards"></div>
-  </div>
-
 </section>
-
-<!-- JS pequeño para resaltar la pastilla activa y scroll suave en navegadores viejos -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const pills = Array.from(document.querySelectorAll('.feature-bar .feature-pill'));
-    pills.forEach(p => p.addEventListener('click', () => {
-      pills.forEach(x => x.classList.remove('active'));
-      p.classList.add('active');
-    }));
-  });
-</script>
-
