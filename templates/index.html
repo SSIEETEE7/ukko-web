@@ -30,6 +30,10 @@
   </style>
 </head>
 <body>
+    <div style="position:fixed;right:10px;bottom:10px;font:12px monospace;color:#999;z-index:9999">
+  build: sec6
+</div>
+
   <!-- Barra superior -->
   <div class="top-bar">
     <p>Envío gratis a partir de $699</p>
@@ -139,30 +143,42 @@
   <a class="feature-pill" href="#cat-essence">UKKO ESSENCE (AROMATERAPIA)</a>
 </section>
 
-<!-- Secciones de tienda -->
+<!-- Secciones de tienda (solo títulos) -->
 <section class="categorias">
-    <div class="categoria">
-        <h2>UKKO SPORTS <span>(Proteínas, Bebidas)</span></h2>
-        <a href="#" class="ver-todo">Ver todo</a>
-        <div class="productos">
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/sports1.jpg') }}" alt="Whey Protein">
-                <h3>Whey Protein</h3>
-                <p>$599</p>
-                <button>Comprar</button>
-            </div>
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/sports2.jpg') }}" alt="Bebida Isotónica">
-                <h3>Bebida Isotónica</h3>
-                <p>$39</p>
-                <button>Comprar</button>
-            </div>
-            <div class="producto">
-                <img src="{{ url_for('static', filename='img/sports3.jpg') }}" alt="Barra Energética">
-                <h3>Barra Energética</h3>
-                <p>$29</p>
-                <button>Comprar</button>
-            </div>
-        </div>
-    </div>
+
+  <!-- 1: SPORTS -->
+  <div class="categoria" id="cat-sports">
+    <h2>UKKO SPORTS <span>(Proteínas, Bebidas)</span></h2>
+    <a href="#" class="see-all">Ver todo</a>
+    <div class="productos"><!-- productos después --></div>
+  </div>
+
+  <!-- 2: CARE -->
+  <div class="categoria" id="cat-care">
+    <h2>UKKO CARE <span>(Productos cuidados de la piel, Shampoos)</span></h2>
+    <a href="#" class="see-all">Ver todo</a>
+    <div class="productos"><!-- productos después --></div>
+  </div>
+
+  <!-- 3: REAL FOOD -->
+  <div class="categoria" id="cat-realfood">
+    <h2>UKKO REAL FOOD <span>(Comida, Snacks, Agua)</span></h2>
+    <a href="#" class="see-all">Ver todo</a>
+    <div class="productos"><!-- productos después --></div>
+  </div>
+
+  <!-- 4: CASA -->
+  <div class="categoria" id="cat-casa">
+    <h2>UKKO CASA <span>(Productos detergentes, Aromatizantes)</span></h2>
+    <a href="#" class="see-all">Ver todo</a>
+    <div class="productos"><!-- productos después --></div>
+  </div>
+
+  <!-- 5: ESSENCE -->
+  <div class="categoria" id="cat-essence">
+    <h2>UKKO ESSENCE <span>(Aromaterapia)</span></h2>
+    <a href="#" class="see-all">Ver todo</a>
+    <div class="productos"><!-- productos después --></div>
+  </div>
+
 </section>
