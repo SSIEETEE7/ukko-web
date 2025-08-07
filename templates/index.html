@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='sec6') }}">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
   <meta charset="UTF-8" />
@@ -10,7 +9,8 @@
   <title>UKKO - Superfoods</title>
 
   <!-- cache-buster para que el CSS se refresque -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='3') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='tiles-v1') }}">
+
 
   <!-- Estilos mínimos para el overlay del banner (el resto vive en style.css) -->
   <style>
@@ -32,8 +32,10 @@
   </style>
 </head>
 <body>
-    <div style="position:fixed;right:10px;bottom:10px;font:12px monospace;color:#999;z-index:9999">
-  build: sec6
+   <div style="position:fixed;right:12px;bottom:10px;font:12px/1 monospace;color:#999;z-index:9999">
+  build: tiles-v1
+</div>
+
 </div>
 
   <!-- Barra superior -->
@@ -145,42 +147,35 @@
   <a class="feature-pill" href="#cat-essence">UKKO ESSENCE (AROMATERAPIA)</a>
 </section>
 
-<!-- Secciones de tienda (solo títulos) -->
-<section class="categorias">
+<!-- Categorías (5 en una fila) -->
+<section class="category-tiles">
+  <a class="tile" href="{{ url_for('sports') }}">
+    <img src="{{ url_for('static', filename='img/cat-sports.jpg') }}" alt="UKKO SPORTS">
+    <h4>UKKO SPORTS</h4>
+    <p class="sub">Proteínas, Bebidas</p>
+  </a>
 
-  <!-- 1: SPORTS -->
-  <div class="categoria" id="cat-sports">
-    <h2>UKKO SPORTS <span>(Proteínas, Bebidas)</span></h2>
-    <a href="#" class="see-all">Ver todo</a>
-    <div class="productos"><!-- productos después --></div>
-  </div>
+  <a class="tile" href="{{ url_for('care') }}">
+    <img src="{{ url_for('static', filename='img/cat-care.jpg') }}" alt="UKKO CARE">
+    <h4>UKKO CARE</h4>
+    <p class="sub">Cuidado de la piel, Shampoos</p>
+  </a>
 
-  <!-- 2: CARE -->
-  <div class="categoria" id="cat-care">
-    <h2>UKKO CARE <span>(Productos cuidados de la piel, Shampoos)</span></h2>
-    <a href="#" class="see-all">Ver todo</a>
-    <div class="productos"><!-- productos después --></div>
-  </div>
+  <a class="tile" href="{{ url_for('real_food') }}">
+    <img src="{{ url_for('static', filename='img/cat-realfood.jpg') }}" alt="UKKO REAL FOOD">
+    <h4>UKKO REAL FOOD</h4>
+    <p class="sub">Comida, Snacks, Agua</p>
+  </a>
 
-  <!-- 3: REAL FOOD -->
-  <div class="categoria" id="cat-realfood">
-    <h2>UKKO REAL FOOD <span>(Comida, Snacks, Agua)</span></h2>
-    <a href="#" class="see-all">Ver todo</a>
-    <div class="productos"><!-- productos después --></div>
-  </div>
+  <a class="tile" href="{{ url_for('casa') }}">
+    <img src="{{ url_for('static', filename='img/cat-casa.jpg') }}" alt="UKKO CASA">
+    <h4>UKKO CASA</h4>
+    <p class="sub">Detergentes, Aromatizantes</p>
+  </a>
 
-  <!-- 4: CASA -->
-  <div class="categoria" id="cat-casa">
-    <h2>UKKO CASA <span>(Productos detergentes, Aromatizantes)</span></h2>
-    <a href="#" class="see-all">Ver todo</a>
-    <div class="productos"><!-- productos después --></div>
-  </div>
-
-  <!-- 5: ESSENCE -->
-  <div class="categoria" id="cat-essence">
-    <h2>UKKO ESSENCE <span>(Aromaterapia)</span></h2>
-    <a href="#" class="see-all">Ver todo</a>
-    <div class="productos"><!-- productos después --></div>
-  </div>
-
+  <a class="tile" href="{{ url_for('essence') }}">
+    <img src="{{ url_for('static', filename='img/cat-essence.jpg') }}" alt="UKKO ESSENCE">
+    <h4>UKKO ESSENCE</h4>
+    <p class="sub">Aromaterapia</p>
+  </a>
 </section>
