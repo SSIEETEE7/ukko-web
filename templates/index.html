@@ -1,84 +1,120 @@
-<!-- BUILD TEST: v20f7117 -->
-<h1 style="position:fixed;right:10px;bottom:10px;font:12px/1 monospace;color:#999;z-index:9999">v20f7117</h1>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UKKO</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UKKO - Superfoods</title>
+
+  <!-- cache-buster para que el CSS se refresque -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='3') }}">
+
+  <!-- Estilos mínimos para el overlay del banner (el resto vive en style.css) -->
+  <style>
+    .banner-content{
+      position:absolute; inset:0; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; text-align:center;
+      color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.35); padding:0 16px;
+    }
+    .banner-content h2{ margin:0 0 8px; font-size:clamp(1.4rem,3.5vw,2.4rem); }
+    .banner-content .cta{
+      margin-top:12px; background:#111; color:#fff; padding:12px 22px;
+      border-radius:28px; text-decoration:none; font-weight:600;
+      display:inline-block;
+    }
+    .banner-content .cta:hover{ filter:brightness(1.1); }
+    @media (max-width: 768px){
+      .main-banner{ height: 320px; }
+    }
+  </style>
 </head>
 <body>
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <p>Envío gratis a partir de $699</p>
+  </div>
 
-    <!-- Barra negra superior -->
-    <div class="top-bar">
-        <p>Envío gratis a partir de $699</p>
+  <!-- Header -->
+  <header class="main-header">
+    <!-- ⚠️ LOGO en .jpg -->
+    <img src="{{ url_for('static', filename='img/logo-ukko.jpg') }}" alt="UKKO Logo" class="logo">
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar productos...">
     </div>
 
-    <!-- Header principal -->
-    <header class="main-header">
-        <img src="{{ url_for('static', filename='img/logo-ukko.png') }}" alt="UKKO Logo" class="logo">
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar productos...">
-        </div>
-        <div class="header-buttons">
-            <button class="btn-outline">👤 Mi cuenta</button>
-            <button class="btn-black">🛒 $0 (0)</button>
-        </div>
-    </header>
+    <div class="header-buttons">
+      <button class="btn-outline">👤 Mi cuenta</button>
+      <button class="btn-black">🛒 $0 (0)</button>
+    </div>
+  </header>
 
-    <!-- Menú -->
-    <nav class="nav-bar">
-        <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Dónde Comprar</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-<!-- Banner principal (slider) -->
-<section class="main-banner" id="slider">
-  <div class="slide active">
-    <img src="{{ url_for('static', filename='img/banner1.jpeg') }}" alt="Banner 1">
-  </div>
-  <div class="slide">
-    <img src="{{ url_for('static', filename='img/banner2.jpeg') }}" alt="Banner 2">
-  </div>
-  <div class="slide">
-    <img src="{{ url_for('static', filename='img/banner3.jpeg') }}" alt="Banner 3">
-  </div>
+  <!-- Menú -->
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#">Productos ▾</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Dónde Comprar</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
 
-  <!-- Controles opcionales (puntos) -->
-  <div class="dots">
-    <button class="dot active" data-index="0" aria-label="Banner 1"></button>
-    <button class="dot" data-index="1" aria-label="Banner 2"></button>
-    <button class="dot" data-index="2" aria-label="Banner 3"></button>
-  </div>
-</section>
+  <!-- Banner principal (slider) -->
+  <section class="main-banner" id="slider">
+    <div class="slide active">
+      <img src="{{ url_for('static', filename='img/banner1.jpeg') }}" alt="Banner 1">
+      <div class="banner-content">
+        <h2>Superfoods 100% naturales</h2>
+        <a href="#productos" class="cta">Comprar ahora</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="{{ url_for('static', filename='img/banner2.jpeg') }}" alt="Banner 2">
+      <div class="banner-content">
+        <h2>Energía y bienestar diario</h2>
+        <a href="#productos" class="cta">Ver catálogo</a>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="{{ url_for('static', filename='img/banner3.jpeg') }}" alt="Banner 3">
+      <div class="banner-content">
+        <h2>Calidad premium certificada</h2>
+        <a href="#productos" class="cta">Conoce más</a>
+      </div>
+    </div>
 
-<!-- al final del body, antes de </body> -->
-<script>
-  (function () {
+    <!-- Puntos del slider -->
+    <div class="dots">
+      <button class="dot active" data-index="0" aria-label="Banner 1"></button>
+      <button class="dot" data-index="1" aria-label="Banner 2"></button>
+      <button class="dot" data-index="2" aria-label="Banner 3"></button>
+    </div>
+  </section>
+
+  <!-- (Opcional) Ancla para CTA -->
+  <section id="productos" style="height:40px"></section>
+
+  <!-- Script del slider -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
     const slider = document.getElementById('slider');
     const slides = Array.from(slider.querySelectorAll('.slide'));
-    const dots = Array.from(slider.querySelectorAll('.dot'));
-    let i = 0, timer = null;
+    const dots   = Array.from(slider.querySelectorAll('.dot'));
+    let i = 0, timer;
 
-    function show(n) {
-      slides.forEach((s, idx) => s.classList.toggle('active', idx === n));
-      dots.forEach((d, idx) => d.classList.toggle('active', idx === n));
+    function show(n){
+      slides.forEach((s, idx)=> s.classList.toggle('active', idx===n));
+      dots.forEach((d, idx)=> d.classList.toggle('active', idx===n));
       i = n;
     }
+    function next(){ show((i+1) % slides.length); }
 
-    function next() {
-      show((i + 1) % slides.length);
-    }
+    // ⏱ Velocidad del slider (ms)
+    const INTERVALO = 4000;
 
-    function start() { timer = setInterval(next, 4000); }
-    function stop() { clearInterval(timer); }
+    function start(){ timer = setInterval(next, INTERVALO); }
+    function stop(){ clearInterval(timer); }
 
-    dots.forEach(d => d.addEventListener('click', e => {
+    dots.forEach(d => d.addEventListener('click', e=>{
       stop();
       show(Number(e.currentTarget.dataset.index));
       start();
@@ -87,10 +123,10 @@
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', start);
 
+    show(0);
     start();
-  })();
-</script>
-
-
+  });
+  </script>
 </body>
 </html>
+
