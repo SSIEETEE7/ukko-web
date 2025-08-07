@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='cats') }}">
+</head>
+<body>
+  <div class="top-bar"><p>Envío gratis a partir de $699</p></div>
+
+  <header class="main-header">
+    <img src="{{ url_for('static', filename='img/logo-ukko.jpg') }}" alt="UKKO Logo" class="logo">
+    <div class="search-bar"><input type="text" placeholder="Buscar productos..."></div>
+    <div class="header-buttons">
+      <button class="btn-outline">👤 Mi cuenta</button>
+      <button class="btn-black">🛒 $0 (0)</button>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="{{ url_for('home') }}">Inicio</a></li>
+      <li><a href="{{ url_for('sports') }}">Sports</a></li>
+      <li><a href="{{ url_for('care') }}">Care</a></li>
+      <li><a href="{{ url_for('real_food') }}">Real Food</a></li>
+      <li><a href="{{ url_for('casa') }}">Casa</a></li>
+      <li><a href="{{ url_for('essence') }}">Essence</a></li>
+    </ul>
+  </nav>
+
+  <section class="shop-sections" style="padding-top:24px">
+    <h2 style="margin:0 0 8px">{{ title }}</h2>
+    <p style="margin:0 0 24px; color:#555">{{ subtitle }}</p>
+    <!-- Aquí luego metemos los productos de la categoría -->
+    <p>Próximamente productos de {{ title }}…</p>
+  </section>
+</body>
+</html>
