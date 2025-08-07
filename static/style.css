@@ -21,8 +21,10 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 90px; /* antes quizá 60px */
+    width: auto;  /* mantiene la proporción */
 }
+
 
 .search-bar input {
     width: 400px;
