@@ -46,12 +46,20 @@ body {
     border-radius: 25px;
 }
 
+
 .btn-black {
-    background: black;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5); /* Negro semi-transparente */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  margin-top: 50px; /* Baja el botón */
+  border: none;
 }
+
+.btn-black:hover {
+  background: rgba(0, 0, 0, 0.7); /* Un poco más oscuro al pasar el mouse */
+}
+
 
 /* Menú de navegación */
 .nav-bar {
