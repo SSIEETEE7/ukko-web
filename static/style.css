@@ -201,4 +201,26 @@ html { scroll-behavior: smooth; }
 @media (max-width:1100px){ .category-tiles{ grid-template-columns: repeat(3, minmax(160px,1fr)); } }
 @media (max-width:700px){  .category-tiles{ grid-template-columns: repeat(2, minmax(150px,1fr)); } }
 @media (max-width:420px){  .category-tiles{ grid-template-columns: 1fr; } }
+/* --- CTA del banner (forzamos estilos) --- */
+.hero .btn-black,
+.banner .btn-black,
+.header-hero .btn-black,
+.header-buttons .btn-black,
+a.btn-black,
+button.btn-black {
+  background: rgba(0,0,0,0.5) !important;   /* transparente */
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.35) !important;
+  backdrop-filter: blur(4px);
+  padding: 10px 22px !important;
+  border-radius: 25px !important;
+  margin-top: 48px !important;              /* baja el botón */
+}
 
+/* Si el botón está dentro de este contenedor, da espacio arriba */
+.hero .header-buttons,
+.banner .header-buttons,
+.header-hero .header-buttons {
+  gap: 16px;
+  margin-top: 24px;
+}
